@@ -151,52 +151,64 @@
 
     <!-- Contact & Lead Form -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Partner With Us</h2>
-                    <p>Ready to source at scale? Secure premium fabric margins through our highly efficient trade routing pipeline.</p>
-                    <div class="info-item">
-                        <span>🏢</span>
-                        <p><strong>Corporate Base:</strong> Dubai Free Zone Trading License Registered Entity</p>
-                    </div>
-                    <div class="info-item">
-                        <span>🇪🇺</span>
-                        <p><strong>Fulfillment Core:</strong> 3PL Bonded Network Gateways (Constanța / Bucharest, Romania)</p>
-                    </div>
-                    <div class="info-item">
-                        <span>✉️</span>
-                        <p><strong>Desk Email:</strong> trade@zamanitextiles.local</p>
-                    </div>
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Partner With Us</h2>
+                <p>Ready to source at scale? Secure premium fabric margins through our highly efficient trade routing pipeline.</p>
+                <div class="info-item">
+                    <span>🏢</span>
+                    <p><strong>Corporate Base:</strong> Dubai Free Zone Trading License Registered Entity</p>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form id="leadForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name / Company</label>
-                            <input type="text" id="name" required placeholder="e.g., Parisian Design House LLC">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Business Email</label>
-                            <input type="email" id="email" required placeholder="name@company.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="interest">Primary Sourcing Interest</label>
-                            <select id="interest">
-                                <option value="ankara">Nigerian Ankara & Wax Prints (Bulk)</option>
-                                <option value="india-cotton">Indian Khadi & Premium Silks</option>
-                                <option value="custom">Custom Hybrid Sourcing Order</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Estimated Monthly Volume / Logistics Requirements</label>
-                            <textarea id="message" rows="4" placeholder="Describe your destination market (e.g., Shipments to Germany warehouses, direct container brokering, etc.)"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Submit Formal Sourcing Inquiry</button>
-                    </form>
+                <div class="info-item">
+                    <span>🇪🇺</span>
+                    <p><strong>Fulfillment Core:</strong> 3PL Bonded Network Gateways (Constanța / Bucharest, Romania)</p>
+                </div>
+                <div class="info-item">
+                    <span>✉️</span>
+                    <p><strong>Desk Email:</strong> trade@zamanitextiles.local</p>
                 </div>
             </div>
+            <div class="contact-form-wrapper">
+                <!-- Changed Action URL to Web3Forms -->
+                <form action="https://web3forms.com" id="leadForm" class="contact-form" method="POST">
+                    
+                    <!-- REQUIRED: Paste your Web3Forms Access Key here -->
+                    <input type="hidden" name="access_key" value="40f1048c-e973-433d-a868-4bf8c11c138d">
+
+                    <div class="form-group">
+                        <label for="name">Your Name / Company</label>
+                        <input type="text" id="name" name="name" required placeholder="e.g., Parisian Design House LLC" >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" name="email" required placeholder="name@company.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest">Primary Sourcing Interest</label>
+                        <select id="interest" name="sourcing_interest">
+                            <option value="ankara">Nigerian Ankara & Wax Prints (Bulk)</option>
+                            <option value="india-cotton">Indian Khadi & Premium Silks</option>
+                            <option value="custom">Custom Hybrid Sourcing Order</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Estimated Monthly Volume / Logistics Requirements</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your destination market (e.g., Shipments to Germany warehouses, direct container brokering, etc.)"></textarea>
+                    </div>
+
+                    <!-- Optional custom redirect thank you page -->
+                    <!-- <input type="hidden" name="redirect" value="https://web3forms.com"> -->
+
+                    <button type="submit" class="btn-submit">Submit Formal Sourcing Inquiry</button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
