@@ -243,6 +243,15 @@ h1, h2, h3 {
     gap: 2.5rem;
 }
 
+.card-img {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
 .showcase-card {
     background: var(--white);
     border: 1px solid var(--border);
@@ -250,6 +259,12 @@ h1, h2, h3 {
     overflow: hidden;
     position: relative;
     box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.08);
 }
 
 .showcase-card .badge {
@@ -264,24 +279,27 @@ h1, h2, h3 {
     text-transform: uppercase;
     border-radius: 4px;
     z-index: 5;
+    letter-spacing: 0.5px;
 }
 
-.card-img {
-    height: 240px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.showcase-card:hover .card-img {
+    transform: scale(1.05);
 }
 
-/* Fallback elegant vector patterns built entirely via CSS linear gradients to avoid external image dependencies */
+/* Showcase card textile images */
 .text-ankara {
-    background: repeating-linear-gradient(45deg, #c97d24, #c97d24 10px, #aa6515 10px, #aa6515 20px);
+    background-color: #c97d24;
+    background-image: url('Ankara sample.jpg');
+    background-image: url('Ankara%20sample.jpg');
 }
 .text-khadi {
-    background: repeating-linear-gradient(90deg, #eae5df, #eae5df 4px, #dfd8cf 4px, #dfd8cf 8px);
+    background-color: #dfd8cf;
+    background-image: url('khadi cottons.jpeg');
+    background-image: url('khadi%20cottons.jpeg');
 }
 .text-asoeke {
-    background: repeating-linear-gradient(0deg, #4a2810, #4a2810 15px, #c97d24 15px, #c97d24 18px);
+    background-color: #4a2810;
+    background-image: url('Asoeko.jpg');
 }
 
 .card-body {
@@ -545,4 +563,127 @@ h1, h2, h3 {
 
 .popup-close-btn:hover {
     background: #2d3748;
+}
+
+/* About / Our Story Section */
+.about {
+    padding: 6rem 0;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 1rem 0 1.5rem 0;
+    color: var(--dark);
+}
+
+.about-content .lead {
+    font-size: 1.15rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.about-content p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.section-tag {
+    background: rgba(201, 125, 36, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(201, 125, 36, 0.2);
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+/* Stats Card Styling */
+.about-stats-card {
+    position: relative;
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(201, 125, 36, 0.08);
+}
+
+.about-stats-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--dark);
+    line-height: 1.3;
+}
+
+.about-stats-card p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item .stat-num {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.stat-item .stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }
